@@ -1,0 +1,27 @@
+{
+  "name": "pratica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./app/static/css/tailwind-input.css -o ./app/static/css/tailwind.css --watch",
+    "dev": "uvicorn app.main:app --reload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DieAllPies/pratica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DieAllPies/pratica/issues"
+  },
+  "homepage": "https://github.com/DieAllPies/pratica#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}

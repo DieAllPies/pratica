@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal da Compostagem</title>
+  <link href="{{ url_for('static', path='/css/tailwind.css') }}" rel="stylesheet">
+</head>
+<body class="bg-[#E8F6EC] text-gray-900">
+  <header class="bg-white text-[#401640] p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="/" class="text-lg font-bold">Portal da Compostagem</a>
+      <nav class="space-x-4">
+        <a href="/" class="px-4 py-2 rounded hover:bg-[#401640] hover:text-white transition">Home</a>
+        <a href="/compostagem" class="px-4 py-2 rounded hover:bg-[#401640] hover:text-white transition">Compostagem</a>
+        <a href="/horta" class="px-4 py-2 rounded hover:bg-[#401640] hover:text-white transition">Horta</a>
+        <a href="/sobre" class="px-4 py-2 rounded hover:bg-[#401640] hover:text-white transition">Sobre</a>
+      </nav>
+    </div>
+  </header>
+  <main class="p-8">
+    {% block content %}{% endblock %}
+  </main>
+    <footer class="bg-white text-[#401640] py-8 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
+      <div class="col-span-2 sm:col-span-1">
+        <h2 class="font-semibold mb-2">Portal da Compostagem</h2>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Home</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li><a href="/">Início</a></li>
+          <li><a href="#">Hortas e compostagem</a></li>
+          <li><a href="#">Gostou do que viu?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Compostagem</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li><a href="#">Vermicompostagem</a></li>
+          <li><a href="#">Compostagem seca</a></li>
+          <li><a href="#">Vamos fazer?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Horta</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li><a href="#">Benefícios</a></li>
+          <li><a href="#">Tipos de hortas</a></li>
+          <li><a href="#">Vamos fazer?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Sobre</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li><a href="/sobre">Quem somos?</a></li>
+          <li><a href="/sobre#form">Fale conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
