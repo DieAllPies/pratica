@@ -1,0 +1,14 @@
+# Environment and credentials
+.env
+*.json
+
+# Virtual environment
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS / IDE clutter
+.DS_Store
+*.log

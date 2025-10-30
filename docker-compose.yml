@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  pratica:
+    build: .
+    container_name: pratica_app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - .:/app
