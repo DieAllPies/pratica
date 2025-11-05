@@ -1,0 +1,476 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<!-- 🌱 O que é uma horta doméstica -->
+<section id="horta" class="max-w-5xl mx-auto bg-[#E8F6EC] p-10 rounded-lg mb-12">
+  <h1 class="text-[#401640] text-3xl font-bold text-[#000000] mb-6">
+    O que é uma horta doméstica?
+  </h1>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    É o cantinho verde da sua casa onde você cultiva plantas comestíveis, como ervas, temperos, hortaliças e até pequenas frutas! Pode ser num vaso na janela, num cantinho do quintal ou até em estruturas criativas. O melhor?
+  </p>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    Você colhe alimentos fresquinhos sem sair de casa!
+  </p>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    Além disso, você pode usar o seu próprio adubo, com a composteira caseira, sem precisar depender de comprar em agropecuárias.
+  </p>
+
+  <!-- Image -->
+  <div class="flex justify-center my-10">
+    <img 
+      src="{{ url_for('static', path='images/horta-img-big1.svg') }}" 
+      alt="Ilustração de horta doméstica"
+      class="rounded-lg shadow-md w-full max-w-3xl object-cover">
+  </div>
+</section>
+{% endblock %}
+
+{% block fullwidth_sections %}
+<!-- 🌾 Section Header — Benefícios -->
+<section class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Benefícios
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="#tipos-horta"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#horta"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 🌿 Benefícios Section -->
+<section id="beneficios" class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">
+      O que você ganha?
+    </h2>
+
+    <!-- Row 1 -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+      
+      <!-- 1 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small1.svg') }}" 
+          alt="Alimentação mais saudável"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Alimentação mais saudável</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Colha ingredientes orgânicos e livres de agrotóxicos direto do pé para a panela.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small2.svg') }}" 
+          alt="Economia no mercado"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Economia no mercado</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Reduza gastos com temperos, folhas e legumes que você mesmo cultiva.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small3.svg') }}" 
+          alt="Terapia verde"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Terapia verde</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Cuidar das plantas reduz o estresse e traz sensação de bem-estar.
+        </p>
+      </div>
+    </div>
+    <br>
+    <!-- Row 2 -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left mt-10">
+      
+      <!-- 4 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small4.svg') }}" 
+          alt="Decoração viva"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Decoração viva</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Hortas deixam o espaço mais bonito e cheiroso — alecrim e manjericão são perfumes naturais!
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small5.svg') }}" 
+          alt="Consciente e sustentável"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Consciente e sustentável</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Menos plástico, menos desperdício e mais conexão com a natureza.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-small6.svg') }}" 
+          alt="Conforto e bem-estar"
+          class="w-full h-48 object-cover rounded-md mb-4 shadow-sm">
+        <h3 class="text-[#401640] font-semibold mb-2">Conforto e bem-estar</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Em momentos de baixa umidade do ar, a horta pode funcionar como um umidificador natural.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌾 Section Header — Tipos de hortas -->
+<section id="tipos-horta" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Tipos de hortas
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="#vamos-fazer"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#horta"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 🌿 Tipos de hortas Section -->
+<section class="w-full bg-[#E8F6EC] py-20">
+  <div class="max-w-6xl mx-auto px-8">
+    <br>
+    <!-- Row 1 — Hortas horizontais -->
+    <div class="flex flex-row justify-between items-start gap-12 flex-wrap">
+
+      <!-- Left Column — Text -->
+      <div class="flex-1 min-w-[320px]">
+        <h2 class="text-[#401640] text-3xl font-semibold mb-8">Hortas horizontais</h2>
+        <h3 class="text-[#401640] font-semibold mb-4 text-lg">Características:</h3>
+        <p class="text-gray-700 text-base leading-relaxed mb-2">
+          Tradicionais, no chão ou em canteiros, ideais para quem tem espaço (como quintais ou varandas amplas).
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Ótimas para plantar raízes (cenoura, beterraba) e folhas grandes (alface, couve).
+        </p>
+      </div>
+
+      <!-- Right Column — Image -->
+      <div class="flex-1 min-w-[320px] flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-medium1.svg') }}" 
+          alt="Horta horizontal"
+          class="w-full max-w-md h-auto rounded-md object-contain shadow-sm">
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<!-- 🌿 Row 2 — Hortas verticais -->
+<section class="w-full bg-[#E8F6EC] py-20">
+  <div class="max-w-6xl mx-auto px-8">
+
+    <!-- Two-column layout -->
+    <div class="flex flex-row justify-between items-start gap-12 flex-wrap">
+
+      <!-- Left Column — Image -->
+      <div class="flex-1 min-w-[320px] flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-medium2.svg') }}" 
+          alt="Horta vertical"
+          class="w-full max-w-md h-auto rounded-md object-contain shadow-sm">
+      </div>
+
+      <!-- Right Column — Text -->
+      <div class="flex-1 min-w-[320px]">
+        <h2 class="text-[#401640] text-3xl font-semibold mb-8 text-left">Hortas verticais</h2>
+        <h3 class="text-[#401640] font-semibold mb-4 text-lg">Características:</h3>
+        <p class="text-gray-700 text-base leading-relaxed mb-2">
+          Feitas em paredes ou estruturas suspensas, perfeitas para ambientes pequenos!
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed mb-2">
+          Use vasinhos, garrafas PET ou painéis para cultivar ervas (hortelã, salsinha), morangos ou flores comestíveis.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Economizam espaço e ainda viram um mural vivo!
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <br>
+</section>
+
+<!-- 🌾 Section Header — Vamos fazer -->
+<section id="vamos-fazer" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Vamos fazer?
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="/sobre"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#horta"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ☀️ Escolha do local e preparação Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    
+    <!-- Section Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">
+      Escolha do local e preparação
+    </h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+      
+      <!-- Column 1 — Luz solar -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Luz solar</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Escolha um local que receba pelo menos 6 horas de sol por dia 
+          (varandas, janelas ou quintais são ideais).
+        </p>
+      </div>
+
+      <!-- Column 2 — Proteção contra vento -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Proteção contra vento</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Evite áreas com correntes fortes que possam quebrar plantas jovens.
+        </p>
+      </div>
+
+      <!-- Column 3 — Preparo do solo -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Preparo do solo</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Se plantar direto no chão, remova pedras e ervas daninhas. 
+          Misture terra vegetal + composto orgânico (50/50) para nutrição.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- 🪴 Seleção de vasos ou recipientes Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">
+      Seleção de vasos ou recipientes
+    </h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+
+      <!-- Column 1 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2 text-base">Vasos de plástico ou barro</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Furos no fundo são essenciais para evitar raízes encharcadas.
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2 text-base">Recicláveis</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Garrafas PET, latas ou caixas de madeira (fure o fundo e forre com pedriscos).
+        </p>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2 text-base">Dicas!</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Para começar, vasos de 20–30 cm de profundidade são suficientes para a maioria das hortaliças. 
+          Use pratinhos sob os vasos para coletar água excedente, mas esvazie-os após regar.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🌿 Escolha das plantas Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Two-column layout -->
+    <div class="flex flex-row justify-between items-start gap-12 flex-wrap">
+
+      <!-- Left Column — Text -->
+      <div class="flex-1 min-w-[320px]">
+        <h2 class="text-[#401640] text-3xl font-semibold mb-6">Escolha das plantas</h2>
+
+        <p class="text-[#401640] font-semibold mb-4 text-lg">
+          Sugestões à prova de erros (para iniciantes):
+        </p>
+
+        <!-- Force list display -->
+        <ol class="list-decimal list-inside text-gray-800 text-base leading-relaxed space-y-2 mb-6 block pl-5">
+          <li>Alface: cresce rápido e pode ser colhida folha a folha.</li>
+          <li>Manjericão: ama sol e é perfeito para temperos.</li>
+          <li>Rabanete: colheita em apenas 30 dias!</li>
+          <li>Cebolinha: rebrota após o corte e é super resistente.</li>
+        </ol>
+
+        <p class="text-gray-800 text-base leading-relaxed">
+          Alerta: evite plantas que exigem muito espaço (como abóboras) ou cuidados complexos no início.
+        </p>
+      </div>
+
+      <!-- Right Column — Image -->
+      <div class="flex-1 min-w-[320px] flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/horta-img-medium3.svg') }}" 
+          alt="Escolha das plantas"
+          class="w-full max-w-md h-auto rounded-md object-contain shadow-sm">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- 🌱 Plantio correto Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Section Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">
+      Plantio correto
+    </h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+      
+      <!-- Column 1 — Sementes ou mudas -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Sementes ou mudas?</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Mudas são mais fáceis para iniciantes (compre em viveiros de confiança).
+        </p>
+      </div>
+
+      <!-- Column 2 — Profundidade e espaçamento -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Profundidade e espaçamento</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Plante sementes a 2× o tamanho delas na terra. Para mudas, cubra as raízes sem enterrar o caule. 
+          Respeite 10–15 cm entre plantas para evitar competição por nutrientes.
+        </p>
+      </div>
+
+      <!-- Column 3 — Dicas -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Dicas!</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Regue levemente logo após o plantio para “assentar” a terra.  
+          Erro comum: ignorar a drenagem!  
+          Certifique-se de que o local não acumule água (use uma pá para testar a absorção).
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🌞 Cuidados diários e rotina Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Section Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">
+      Cuidados diários e rotina
+    </h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+
+      <!-- Column 1 — Como regar -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Como regar?</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Toque a terra com o dedo — se estiver seca, regue de manhã cedo ou no fim da tarde.  
+          Evite molhar as folhas para não causar fungos.  
+          Erro fatal: excesso de água! Raízes apodrecem rápido. Menos é mais!
+        </p>
+      </div>
+
+      <!-- Column 2 — Pode tomar sol -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Pode tomar Sol?</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Sim. Lembre-se de girar os vasos a cada 3 dias para que todas as partes da planta recebam luz.
+        </p>
+      </div>
+
+      <!-- Column 3 — Cuidado com as pragas -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <h3 class="text-[#401640] font-semibold mb-2">Cuidado com as pragas!</h3>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Inspecione folhas regularmente.  
+          Se aparecerem pulgões, use água com sabão neutro (1 colher por litro) e borrife.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

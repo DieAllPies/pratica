@@ -1,0 +1,380 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<!-- 🌱 O que é uma composteira -->
+<section id="compostagem" class="max-w-5xl mx-auto bg-[#E8F6EC] p-10 rounded-lg mb-12">
+  <h1 class="text-[#401640] text-3xl font-bold text-[#000000] mb-6">
+    O que é uma composteira?
+  </h1>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    A compostagem é um processo natural que transforma resíduos orgânicos, como restos de frutas, legumes e verduras, em adubo. Esse processo é realizado por micro-organismos que decompõem o material, devolvendo à terra o que veio dela. A compostagem agrega muitos benefícios para a comunidade: além de reduzir a quantidade de lixo, a compostagem ajuda a diminuir a emissão de gases do efeito estufa e melhora a fertilidade do solo.
+  </p>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    A compostagem não é apenas uma prática sustentável, mas também uma ótima  oportunidade de gerar renda. Ao transformar resíduos orgânicos em adubo natural, é  possível vender o composto pronto para hortas, jardins, produtores rurais e até para  quem cultiva plantas em casa. A média de um valor de saco de adubo feito por compostagem é de R$20,00 a R$30,00  por 25Kg. Além da venda do adubo, também é possível lucrar com serviços de coleta de resíduos  orgânicos, montagem de composteiras domésticas ou consultorias para empresas e  condomínios que desejam implantar o sistema.
+  </p>
+
+  <p class="text-gray-800 leading-relaxed mb-4">
+    Com baixo investimento e muita consciência ambiental, a compostagem pode se  tornar um negócio verde, que une sustentabilidade e geração de renda, cuidando do  planeta e do bolso ao mesmo tempo. Você pode fazer compostagem em casa, em escolas ou em empresas, utilizando composteiras simples e separando corretamente os resíduos orgânicos. É uma forma prática, ecológica e econômica de cuidar do planeta
+  </p>
+
+  <!-- Image -->
+  <div class="flex justify-center my-10">
+    <img 
+      src="{{ url_for('static', path='images/composting-img-big1.svg') }}" 
+      alt="Exemplo de composteira"
+      class="rounded-lg shadow-md w-full max-w-3xl object-cover">
+  </div>
+
+  <br>
+
+  <p class="text-sm text-gray-700 leading-relaxed">
+    As composteiras domésticas se dividem em três tipos principais:
+    <span class="font-semibold">vermicompostagem</span> (com minhocas),
+    <span class="font-semibold">compostagem seca</span> (microbiana) e
+    <span class="font-semibold">compostagem elétrica</span>.
+    que variam na metodologia de decomposição, velocidade do processo e espaço necessário, sendo a vermicompostagem mais rápida para produção de adubo líquido e sólido, a seca mais simples e a elétrica uma opção tecnológica para reduzir volume em pouco tempo.
+  </p>
+  <br>
+  <p class="text-sm text-gray-700 leading-relaxed">
+    Aqui, focaremos na vermicompostagem e na compostagem seca.
+  </p>
+</section>
+{% endblock %}
+{% block fullwidth_sections %}
+<!-- 🌾 Section Header — Vermicompostagem -->
+<section id="vermicompostagem" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Vermicompostagem
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="#compostagem-seca"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#compostagem"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 🌱 Informações Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">Informações</h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-center">
+
+      <!-- Column 1 — Como funciona -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small1.svg') }}" 
+          alt="Minhocas na terra"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Como funciona</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Utiliza minhocas (geralmente da Califórnia) para acelerar a decomposição da matéria orgânica.
+        </p>
+      </div>
+
+      <!-- Column 2 — Vantagens -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small2.svg') }}" 
+          alt="Composteira colorida"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Vantagens</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Processo mais rápido, gera adubo sólido de alta qualidade e um líquido rico em nutrientes 
+          (chorume) que, quando diluído, serve como biofertilizante.
+        </p>
+      </div>
+
+      <!-- Column 3 — Ideal para -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small3.svg') }}" 
+          alt="Mãos segurando composto"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Ideal para</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Quem precisa de adubo com mais rapidez e busca um composto líquido e sólido.
+        </p>
+      </div>
+      
+
+    </div>
+    
+    <!-- Title 2 -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">Como montar</h2>
+    
+    <div>
+    <img 
+        src="{{ url_for('static', path='images/composting-img-big2.svg') }}" 
+        alt="Passo a passo montagem composteira"
+        class="w-full h-full object-cover rounded-md mb-4">
+    </div>
+  </div>
+</section>
+<!-- 🌾 Section Header — Compostagem seca -->
+<section id="compostagem-seca" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Compostagem seca
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="#vamos-fazer"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#compostagem"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- 🌱 Informações Section — Compostagem seca -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">Informações</h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-center">
+
+      <!-- Column 1 — Como funciona -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small4.svg') }}" 
+          alt="Compostagem seca em caixa de madeira"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Como funciona</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          A decomposição ocorre por meio de microrganismos (fungos e bactérias) 
+          presentes no solo, sem a ajuda de minhocas.
+        </p>
+      </div>
+
+      <!-- Column 2 — Vantagens -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small5.svg') }}" 
+          alt="Pessoa colocando resíduos na composteira"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Vantagens</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Mais simples e ideal para quem tem espaço em quintais ou prefere um processo 
+          que não exige manipulação constante de minhocas.
+        </p>
+      </div>
+
+      <!-- Column 3 — Ideal para -->
+      <div class="flex-1 min-w-[280px] max-w-[32%]">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-small6.svg') }}" 
+          alt="Família fazendo compostagem em casa"
+          class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-[#401640] font-semibold mb-2">Ideal para</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Casas com quintal, canteiros no chão, ou para quem busca um processo 
+          mais lento e orgânico.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Title 2 -->
+    <h2 class="text-[#401640] text-2xl font-semibold my-10">Como montar</h2>
+    <br>
+    <!-- Full-width image -->
+    <div>
+      <img 
+        src="{{ url_for('static', path='images/composting-img-big3.svg') }}" 
+        alt="Etapas de montagem da compostagem seca com garrafas"
+        class="w-full h-full object-cover rounded-md mb-4">
+    </div>
+  </div>
+</section>
+<!-- 🌾 Section Header — Vamos fazer? -->
+<section id="vamos-fazer" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Vamos fazer?
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <a href="/horta"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Próximo tópico
+      </a>
+
+      <a href="#compostagem"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 🌿 Passo a passo Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Title -->
+    <h2 class="text-[#401640] text-2xl font-semibold mb-10">Passo a passo</h2>
+
+    <!-- Three-column layout -->
+    <div class="flex flex-row flex-wrap justify-between gap-8 text-left">
+
+      <!-- Column 1 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%] flex flex-col gap-8">
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Escolha o local ou recipiente</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Use uma composteira, balde com tampa ou caixa plástica com pequenos furos para ventilação.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Mantenha o equilíbrio e o cuidado</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Mexa o conteúdo a cada 3 a 5 dias para arejar. Se estiver muito seco, adicione um pouco de água; 
+            se estiver muito úmido, acrescente mais material seco.
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%] flex flex-col gap-8">
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Separe os resíduos orgânicos</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Há materiais não recomendados, pois embora alguns alimentos sejam naturais, 
+            o excesso de acidez pode prejudicar os microrganismos, causar mau cheiro e atrair pragas, como ratos e baratas.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Aguarde o tempo de decomposição</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            O processo leva de 2 a 3 meses, dependendo da temperatura e da umidade. 
+            O adubo estará pronto quando o material ficar com cheiro de terra e cor escura.
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="flex-1 min-w-[280px] max-w-[32%] flex flex-col gap-8">
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Monte as camadas</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Faça uma camada de material seco (folhas secas, serragem, papel picado) e, por cima, 
+            uma camada de resíduos úmidos (restos de comida).
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[#401640] font-semibold mb-2">Use o composto na horta</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Misture o adubo à terra das plantas e hortaliças. 
+            Ele melhora o solo e ajuda no crescimento saudável das plantas.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ♻️ O que pode Section -->
+<section class="w-full bg-[#E8F6EC] py-20">
+  <div class="max-w-6xl mx-auto px-8">
+
+    <!-- Two-column layout -->
+    <div class="flex flex-row justify-between items-start gap-12 flex-wrap">
+      
+      <!-- Left Column — Title + List -->
+      <div class="flex-1 min-w-[320px]">
+        <h2 class="text-[#401640] text-3xl font-semibold mb-8">O que pode?</h2>
+        <h3 class="text-[#401640] font-semibold mb-4 text-lg">Materiais permitidos:</h3>
+        <ul class="list-disc list-inside text-gray-700 text-base leading-relaxed space-y-3">
+          <li>Restos de alimentos naturais</li>
+          <li>Cascas de frutas, legumes e verduras</li>
+          <li>Borras e filtros de café</li>
+          <li>Folhas secas e galhos</li>
+          <li>Serragem sem tinta</li>
+          <li>Papel toalha e guardanapo (sem gordura)</li>
+          <li>Papelão picado</li>
+        </ul>
+      </div>
+
+      <!-- Right Column — Image -->
+      <div class="flex-1 min-w-[320px] flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-medium1.svg') }}" 
+          alt="Materiais que podem ir na compostagem"
+          class="w-full max-w-md h-auto rounded-md object-contain shadow-sm">
+      </div>
+
+    </div>
+  </div>
+</section>
+<br>
+<!-- 🚫 O que não pode Section -->
+<section class="w-full bg-[#E8F6EC] py-20">
+  <div class="max-w-6xl mx-auto px-8">
+
+    <!-- Two-column layout -->
+    <div class="flex flex-row justify-between items-start gap-12 flex-wrap">
+      
+      <!-- Left Column — Image -->
+      <div class="flex-1 min-w-[320px] flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/composting-img-medium2.svg') }}" 
+          alt="Materiais que não podem ir na compostagem"
+          class="w-full max-w-md h-auto rounded-md object-contain shadow-sm">
+      </div>
+
+      <!-- Right Column — Title + List -->
+      <div class="flex-1 min-w-[320px]">
+        <h2 class="text-[#401640] text-3xl font-semibold mb-8 text-left">O que não pode?</h2>
+        <h3 class="text-[#401640] font-semibold mb-4 text-lg">Materiais proibidos:</h3>
+        <ul class="list-disc list-inside text-gray-700 text-base leading-relaxed space-y-3">
+          <li>Resíduos de origem animal (carnes, ossos, peixes e gordura)</li>
+          <li>Laticínios e queijos</li>
+          <li>Alimentos muito ácidos ou temperados (limão, laranja, cebola e alho em excesso)</li>
+          <li>Comidas prontas com sal, óleo ou temperos fortes</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<br>
+
+{% endblock %}

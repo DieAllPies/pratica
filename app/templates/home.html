@@ -1,5 +1,206 @@
 {% extends "base.html" %}
-{% block content %}
-  <h1 class="text-3xl text-green-700 font-bold">Bem-vindo!</h1>
-  <p class="mt-4">Este é o início do portal de compostagem.</p>
+
+{% block main_content %}
+<!-- 🌱 Intro Section -->
+<section id="intro" class="max-w-5xl mx-auto text-center bg-[#E8F6EC] p-8 rounded-lg mb-12">
+  <h1 class="text-[#401640] text-4xl font-bold mb-4">
+    Boas vindas ao seu mundo mais verde! 🌱
+  </h1>
+  <p class="leading-relaxed max-w-3xl mx-auto mb-8">
+    Que alegria ter você por aqui! Este é o seu cantinho dedicado à magia da compostagem e ao encanto das hortas domésticas. Seja você um jardineiro de primeira viagem ou um expert em sustentabilidade, nosso site foi feito para inspirar, ensinar e transformar seu pedacinho de terra (ou até mesmo seu apartamento!) em um oásis de vida.
+  </p>
+  <div class="flex justify-center">
+    <img class="rounded-lg shadow-md w-full max-w-3xl mx-auto object-contain sm:object-scale-down"
+         src="{{ url_for('static', path='images/home-img-big1.svg') }}"
+         alt="Composteiras coloridas">
+  </div>
+</section>
+{% endblock %}
+
+{% block fullwidth_sections %}
+<!-- 🌾 Section Header (full-width bar, refined style) -->
+<section id="hortas-e-compostagem" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Hortas e compostagem
+    </h2>
+    <a href="#intro"
+      class="bg-gray-400 hover:bg-gray-500 text-gray-800 text-sm font-medium
+              px-6 py-3 rounded-md transition-all duration-200
+              shadow-sm hover:shadow-md my-4 mx-3"
+      style="background-color:#E6E6E6;">
+      Voltar ao início
+    </a>
+  </div>
+</section>
+<br>
+<!-- 🌿 Composting Overview Section -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto space-y-20 px-6">
+
+    <!-- 🟢 Row 1 — Text left, image right -->
+    <div class="flex flex-row items-center gap-8">
+      <!-- Text -->
+      <div class="flex-1">
+        <h3 class="text-[#401640] text-2xl font-semibold mb-2">Por que compostar?</h3>
+        <p class="text-sm text-gray-800 mb-4 font-semibold">Porque o planeta agradece! 🌍</p>
+        <p class="text-gray-700 leading-relaxed">
+          Compostar não é só reduzir o lixo doméstico, é dar um presente à Terra. 
+          Transforme restos de comida em adubo rico, economize recursos e cultive alimentos mais saudáveis. 
+          O melhor? Tudo começa com pequenos gestos que você vai dominar aqui, passo a passo.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="flex-1 flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/home-img-medium1.svg') }}"
+          alt="Por que compostar"
+          class="w-full max-w-md rounded-lg shadow-sm object-contain">
+      </div>
+    </div>
+
+    <!-- 🟢 Row 2 — Image left, text right -->
+    <div class="flex flex-row items-center gap-8">
+      <!-- Image -->
+      <div class="flex-1 flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/home-img-medium2.svg') }}"
+          alt="Guia prático"
+          class="w-full max-w-md rounded-lg shadow-sm object-contain">
+      </div>
+
+      <!-- Text -->
+      <div class="flex-1">
+        <h3 class="text-[#401640] text-2xl font-semibold mb-2">O que você encontra por aqui?</h3>
+        <p class="text-sm text-gray-800 mb-4 font-semibold">Guia prático de compostagem ♻️</p>
+        <p class="text-gray-700 leading-relaxed">
+          Do baldinho na cozinha à horta de compostagem em quintais urbanos, aqui você vai encontrar tutoriais, 
+          ideias e truques para compostar e cultivar frutas em qualquer espaço, e uma comunidade de apaixonados 
+          por vida eco-friendly.
+        </p>
+      </div>
+    </div>
+
+    <!-- 🟢 Row 3 — Text left, image right -->
+    <div class="flex flex-row items-center gap-8">
+      <!-- Text -->
+      <div class="flex-1">
+        <h3 class="text-[#401640] text-2xl font-semibold mb-2">Pronto para começar?</h3>
+        <p class="text-sm text-gray-800 mb-4 font-semibold">É só nos acompanhar! 🌿</p>
+        <p class="text-gray-700 leading-relaxed">
+          Navegue pelas seções e descubra como é fácil fazer a diferença. 
+          Se ainda é novo, compare as etapas e veja como a mágica acontece. 
+          Nosso portal foi feito para inspirar, ensinar e transformar o “lixo” em luxo para a natureza!
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="flex-1 flex justify-center">
+        <img 
+          src="{{ url_for('static', path='images/home-img-medium3.svg') }}"
+          alt="Pronto para começar"
+          class="w-full max-w-md rounded-lg shadow-sm object-contain">
+      </div>
+    </div>
+
+  </div>
+</section>
+<br>
+<!-- 💬 Gostou do que viu? Section -->
+<section id="gostou-do-que-viu" class="w-full bg-white border-y border-gray-100 py-8 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-8">
+    
+    <!-- Title -->
+    <h2 class="text-[#401640] text-3xl font-semibold tracking-tight">
+      Gostou do que viu?
+    </h2>
+
+    <!-- Buttons -->
+    <div class="flex gap-4">
+      <a href="/sobre#form"
+         class="bg-[#401640] hover:bg-[#2a0e2a] text-white text-sm font-medium
+                px-6 py-3 rounded-md transition-all duration-200
+                shadow-sm hover:shadow-md">
+        Fale conosco
+      </a>
+
+      <a href="#intro"
+         class="text-gray-800 text-sm font-medium px-6 py-3 rounded-md
+                transition-all duration-200 shadow-sm hover:shadow-md"
+         style="background-color:#E6E6E6;">
+        Voltar ao início
+      </a>
+    </div>
+  </div>
+</section>
+<br>
+<!-- 💬 Feedbacks de visitantes -->
+<section class="w-full bg-[#E8F6EC] py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <!-- Title -->
+    <h2 class="text-3xl font-semibold text-[#000000] mb-10">
+      Feedbacks de visitantes
+    </h2>
+    <br>
+
+    <!-- Horizontal cards -->
+    <div class="flex flex-row justify-between gap-6 flex-wrap">
+
+      <!-- Card 1 -->
+      <div class="bg-white px-14 py-12 rounded-2xl shadow-md flex-1 min-w-[300px] mx-4 my-6">
+        <p class="text-lg text-gray-900 font-medium mb-10 leading-relaxed p-2">
+          Você pode aparecer aqui,
+        </p>
+        <div class="flex items-center gap-4 p-4">
+          <div class="flex items-center justify-center" 
+              style="width: 48px; height: 48px; background-color: #D1D5DB; border-radius: 50%;">
+            <span class="text-[10px] text-gray-700 select-none"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-gray-800">Nome</p>
+            <p class="text-gray-500 text-sm">Descrição</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white px-14 py-12 rounded-2xl shadow-md flex-1 min-w-[300px] mx-4 my-6">
+        <p class="text-lg text-gray-900 font-medium mb-10 leading-relaxed p-2">
+          basta clicar em Fale conosco
+        </p>
+        <div class="flex items-center gap-4 p-4">
+          <div class="flex items-center justify-center" 
+              style="width: 48px; height: 48px; background-color: #D1D5DB; border-radius: 50%;">
+            <span class="text-[10px] text-gray-700 select-none"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-gray-800">Nome</p>
+            <p class="text-gray-500 text-sm">Descrição</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white px-14 py-12 rounded-2xl shadow-md flex-1 min-w-[300px] mx-4 my-6">
+        <p class="text-lg text-gray-900 font-medium mb-10 leading-relaxed p-2">
+          e deixar sua mensagem!
+        </p>
+        <div class="flex items-center gap-4 p-4">
+          <div class="flex items-center justify-center" 
+              style="width: 48px; height: 48px; background-color: #D1D5DB; border-radius: 50%;">
+            <span class="text-[10px] text-gray-700 select-none"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-sm text-gray-800">Nome</p>
+            <p class="text-gray-500 text-sm">Descrição</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<br>
 {% endblock %}

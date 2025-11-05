@@ -1,125 +1,141 @@
 {% extends "base.html" %}
-{% if error %}
-  <p class="bg-red-100 text-red-700 p-2 rounded mb-4">{{ error }}</p>
-{% elif request.query_params.get('sent') %}
-  <p class="bg-green-100 text-green-700 p-2 rounded mb-4">Mensagem enviada com sucesso!</p>
-{% endif %}
-{% block content %}
-<section class="p-8">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-    <!-- Left column -->
-    <div>
-      <h1 class="text-4xl font-bold text-[#401640] mb-4">Sobre</h1>
-      <h2 class="text-lg font-semibold mb-2">Quem somos</h2>
-      <p class="mb-4">
-        Esta página foi desenvolvida por um grupo de alunos da Universidade São Francisco, no âmbito da unidade curricular chamada “Extensão e Dinâmicas de Aprendizagem: Sociedade do Futuro”.
-      </p>
 
-      <p class="mb-6">
-        Se você tiver alguma sugestão para nós, ou se simplesmente quiser dar um alô e contar o que achou do nosso site, é só usar o formulário!
-      </p>
+{% block main_content %}
+  {% if error %}
+    <p class="bg-red-100 text-red-700 p-2 rounded mb-4">{{ error }}</p>
+  {% elif request.query_params.get('sent') %}
+    <p class="bg-green-100 text-green-700 p-2 rounded mb-4">
+      Mensagem enviada com sucesso!
+    </p>
+  {% endif %}
 
-      <h2 class="text-2xl font-semibold mb-2">Integrantes do grupo 8.1:</h2>
-      <br>
+  <section class="p-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Left column -->
+      <div>
+        <h1 class="text-4xl font-bold text-[#401640] mb-4">Sobre</h1>
+        <h2 class="text-lg font-semibold mb-2">Quem somos</h2>
+        <p class="mb-4">
+          Esta página foi desenvolvida por um grupo de alunos da Universidade São Francisco,
+          no âmbito da unidade curricular chamada “Extensão e Dinâmicas de Aprendizagem: Sociedade do Futuro”.
+        </p>
 
-      <ul class="space-y-1">
-        <strong>Curso de Arquitetura e Urbanismo:</strong>
-        <ul class="list-disc list-inside ml-5 space-y-1">
-          <li>Camila Cristina Ferraz de Oliveira</li>
-          <li>Francisco Wasilon Araújo Barros</li>
-          <li>Jamaicã Expedita da Silva Machado Paschoal</li>
-          <li>Lilian Nunes da Costa</li>
-          <li>Ryan Araújo Nogueira</li>
-          <li>Sabrina da Silva Gonçalves</li>
+        <p class="mb-6">
+          Se você tiver alguma sugestão para nós, ou se simplesmente quiser dar um alô e contar o que achou do nosso site,
+          é só usar o formulário!
+        </p>
+
+        <h2 class="text-2xl font-semibold mb-2">Integrantes do grupo 8.1:</h2>
+        <br>
+
+        <ul class="space-y-1">
+          <strong>Curso de Arquitetura e Urbanismo:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Camila Cristina Ferraz de Oliveira</li>
+            <li>Francisco Wasilon Araújo Barros</li>
+            <li>Jamaicã Expedita da Silva Machado Paschoal</li>
+            <li>Lilian Nunes da Costa</li>
+            <li>Ryan Araújo Nogueira</li>
+            <li>Sabrina da Silva Gonçalves</li>
+          </ul>
+
           <br>
-        </ul>
+          <strong>Curso de Engenharia de Produção:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Paulo Henrique de Seixas Queiroz Costa</li>
+          </ul>
 
-        <strong>Curso de Engenharia de Produção:</strong>
-        <ul class="list-disc list-inside ml-5 space-y-1">
-          <li>Paulo Henrique de Seixas Queiroz Costa</li>
           <br>
+          <strong>Curso de Engenharia de Software:</strong>
+          <ul class="list-disc list-inside ml-5 space-y-1">
+            <li>Dennis Alves Pedersen</li>
+            <li>Dennis Flores de Souza</li>
+            <li>Pedro Luiz Monte Borella</li>
+          </ul>
         </ul>
-
-        <strong>Curso de Engenharia de Software:</strong>
-        <ul class="list-disc list-inside ml-5 space-y-1">
-          <li>Dennis Alves Pedersen</li>
-          <li>Dennis Flores de Souza</li>
-          <li>Pedro Luiz Monte Borella</li>
-          <br>
-        </ul>
-      </ul>
-    </div>
-
-    <!-- Right column (form) -->
-    <div class="p-2">
-      <h2 class="text-2xl font-bold text-[#401640] mb-4">Fale conosco</h2>
-      <div class="mb-4">
-          <img class="w-full h-64 object-cover rounded-lg shadow-lg" src="{{ url_for('static', path='images/img_contact.svg') }}" alt="Imagem de contato">
       </div>
-  <form action="/send-message" method="post" class="space-y-6">
-  <!-- Name fields -->
-  <div class="flex flex-col sm:flex-row gap-4">
-    <div class="relative w-full sm:w-1/2">
-      <input type="text" id="first_name" name="first_name"
-        class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
-        placeholder="Nome" />
-      <label for="first_name"
-        class="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
-        Nome
-      </label>
+
+      <!-- Right column (form) -->
+      <div class="p-2">
+        <h2 class="text-2xl font-bold text-[#401640] mb-4">Fale conosco</h2>
+        <div class="mb-4">
+          <img
+            class="rounded-lg shadow-md w-full max-w-3xl mx-auto object-contain sm:object-scale-down"
+            src="{{ url_for('static', path='images/img_contact.svg') }}"
+            alt="Imagem de contato"
+          >
+        </div>
+
+        <form action="/send-message" method="post" class="space-y-6">
+          <!-- Name fields -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative w-full sm:w-1/2">
+              <input type="text" id="first_name" name="first_name"
+                class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent
+                       focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
+                placeholder="Nome" />
+              <label for="first_name"
+                class="absolute left-2 top-2 text-gray-500 text-sm transition-all
+                       peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+                       peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
+                Nome
+              </label>
+            </div>
+
+            <div class="relative w-full sm:w-1/2">
+              <input type="text" id="last_name" name="last_name"
+                class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent
+                       focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
+                placeholder="Sobrenome" />
+              <label for="last_name"
+                class="absolute left-2 top-2 text-gray-500 text-sm transition-all
+                       peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base
+                       peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
+                Sobrenome
+              </label>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="relative">
+            <input type="email" id="email" name="email" required
+              class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent
+                     focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
+              placeholder=" " />
+            <label for="email"
+                   class="absolute left-2 top-2 text-gray-500 text-sm transition-all
+                          peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
+                          peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
+              Endereço de e-mail
+            </label>
+            <p id="emailError" class="mt-1 text-xs text-red-500 hidden">
+              Por favor insira um e-mail válido.
+            </p>
+          </div>
+
+          <!-- Message -->
+          <div class="relative">
+            <textarea id="message" name="message"
+              class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 h-32 placeholder-transparent
+                     focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
+              placeholder="Sua mensagem"></textarea>
+            <label for="message"
+              class="absolute left-2 top-2 text-gray-500 text-sm transition-all
+                     peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
+                     peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
+              Sua mensagem
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="bg-[#401640] text-white py-2 px-4 rounded-md w-full
+                   hover:bg-[#2a0e2a] transition hover:shadow-md active:scale-95">
+            Enviar
+          </button>
+        </form>
+      </div>
     </div>
-
-    <div class="relative w-full sm:w-1/2">
-      <input type="text" id="last_name" name="last_name"
-        class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
-        placeholder="Sobrenome" />
-      <label for="last_name"
-        class="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
-        Sobrenome
-      </label>
-    </div>
-  </div>
-
-  <!-- Email -->
-  <div class="relative">
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder=" "
-    required
-    class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent
-           focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none" />
-  <label for="email"
-         class="absolute left-2 top-2 text-gray-500 text-sm transition-all duration-150
-                peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
-                peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
-    Endereço de e-mail
-  </label>
-  <p id="emailError" class="mt-1 text-xs text-red-500 hidden">Por favor insira um e-mail válido.</p>
-</div>
-
-  <!-- Message -->
-  <div class="relative">
-    <textarea id="message" name="message"
-      class="peer w-full rounded-md border border-gray-300 bg-white p-2 pt-5 text-gray-900 placeholder-transparent h-32 focus:border-[#401640] focus:ring-2 focus:ring-[#401640] focus:outline-none"
-      placeholder="Sua mensagem"></textarea>
-    <label for="message"
-      class="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-[#401640]">
-      Sua mensagem
-    </label>
-  </div>
-
-  <!-- Submit -->
-  <button
-    type="submit"
-    class="bg-[#401640] text-white py-2 px-4 rounded-md w-full
-           hover:bg-[#2a0e2a] transition hover:shadow-md active:scale-95">
-    Enviar
-  </button>
-</form>
-
-    </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
